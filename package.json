@@ -2,12 +2,16 @@
   "name": "backend-rollingcoffee",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "node --env-file .env --watch index.js"
   },
   "keywords": [],
   "author": "Prado Brian Nicolas",
   "license": "ISC",
-  "description": "BackEnd Rolling Coffee"
+  "description": "BackEnd Rolling Coffee",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
