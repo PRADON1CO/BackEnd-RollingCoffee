@@ -1,3 +1,11 @@
-import mongoose from "mongoose";
+import mongoose, { Mongoose } from "mongoose";
 
-console.log(process.env.MONGODN_URI);
+const mongodb= process.env.MONGODN_URI;
+
+mongoose.connect(mongodb)
+
+const conexion =  mongoose.connection;
+
+conexion.once('open', ()=>{
+    console.log('Base de datos conectada :)')
+})
